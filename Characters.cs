@@ -8,6 +8,7 @@ using UnityEngine;
 public enum CharType { Archer, Swordsman, Lancer, Mage, Assasin };
 public enum Empire { Roman, Greek, Persian, Chinese, Japanese, British, Egyption}
 public class Characters : MonoBehaviour {
+    public const float MIN_SPEED = 0.1f;
     public string Name, CompName;
     protected int attack, defense, hP, magic;
     protected float speed, dashSpeed;
@@ -128,8 +129,8 @@ public class Characters : MonoBehaviour {
     {
         get
         {
-            if (speed <= 0.1)
-                return 0.1f;
+            if (speed <= MIN_SPEED)
+                return MIN_SPEED;
             else
                 return speed; 
         }
