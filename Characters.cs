@@ -128,7 +128,7 @@ public class Characters : MonoBehaviour {
     {
         get
         {
-            if (speed <= 0)
+            if (speed <= 0.1)
                 return 0.1f;
             else
                 return speed; 
